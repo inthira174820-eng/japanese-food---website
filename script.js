@@ -516,6 +516,7 @@ lessonDetails['mochi3'] = `
 
 `;
 
+
 /* ============================
    Storage keys & helpers
    ============================ */
@@ -617,9 +618,7 @@ document.getElementById('lesson-views').innerText = viewCount + ' ครั้�
   if(!getUserEmail()){ showToast('กรุณาเข้าสู่ระบบก่อนดูบทเรียน'); navigateTo('login'); return; }
 
   // populate UI
-  const lessonBox = document.getElementById('lesson-container');
-lessonBox.classList.add('show');
-
+  document.getElementById('lesson-container').style.display='flex';
   document.getElementById('lesson-title').innerText = lesson.title;
   // ===== รายละเอียดบทเรียน =====
 // ===== แสดงรายละเอียดบทเรียน =====
@@ -632,6 +631,8 @@ detailBox.innerHTML = lessonDetails[id] || 'ยังไม่มีรายล
 // ซ่อนรายละเอียดไว้ก่อน
 detailBox.style.display = 'none';
 detailIcon.textContent = '▼';
+
+
 
   document.getElementById('lesson-category').innerText = lesson.category;
 // ===== จัดการวิดีโอ (แก้เฉพาะตรงนี้) =====
@@ -895,7 +896,7 @@ function prevSlide(){
 
 function startSlider(){
   stopSlider();
-  sliderTimer = setInterval(nextSlide,1000);
+  sliderTimer = setInterval(nextSlide, 4500);
 }
 
 function stopSlider(){
@@ -952,8 +953,6 @@ function getViewCount(id){
   const views = loadViews();
   return views[id] || 0;
 }
-
-
 
 
 
