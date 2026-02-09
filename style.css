@@ -1,13 +1,7 @@
 
 /* -------- Reset & Base -------- */
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
-body{
-  min-height:auto;
-  background-size:100% auto;
-  background-position:top center;
-  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url('https://uploads.onecompiler.io/4429qh5rd/448dfj6g8/126823%20%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87.jpg') center/cover no-repeat;
-  color:#fff; padding-bottom:90px;
-}
+
 
 /* Header */
 header{
@@ -362,22 +356,17 @@ button{
   color:#ffd27f;          /* สีทอง */
   opacity:1;              /* สำคัญสำหรับบาง browser */
 }
-body{
-  position:relative;
-  background:#000;
-}
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  height:100vh; /* 👈 ปรับตรงนี้ */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
   background:
     linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.45)),
     url('https://uploads.onecompiler.io/4429qh5rd/448dfj6g8/126823%20%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87.jpg')
-    center/cover no-repeat;
-  z-index:-1;
+    center / cover no-repeat fixed;
 }
+
 .lesson-toggle {
   cursor: pointer;
   display: inline-flex;   /* ติดคำ */
